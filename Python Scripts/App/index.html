@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction</title>
+</head>
+<body>
+    <h1>Salary Prediction</h1>
+    <form method="POST">
+        <label for="job_criteria">Job Criteria:</label>
+        <input type="text" name="job_criteria"><br>
+        <label for="job_type">Job Type:</label>
+        <input type="text" name="job_type"><br>
+        <label for="experience_level">Experience Level:</label>
+        <input type="text" name="experience_level"><br>
+        <label for="country">Country:</label>
+        <input type="text" name="country"><br>
+        <label for="skills">Skills:</label>
+        <input type="text" name="skills"><br>
+        <input type="submit" value="Predict Salary">
+    </form>
+    
+    {% if predicted_salary %}
+    <h2>Predicted Salary:</h2>
+    <p>{{ predicted_salary }}</p>
+    {% endif %}
+</body>
+</html>
